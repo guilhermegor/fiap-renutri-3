@@ -1,0 +1,29 @@
+PROJETO: renutri — Dispensa inteligente, comida aproveitada
+FIAP — Fase 3 (AGROTECH) — Grupo 20
+
+================================================================
+PITCH VIDEO (PV)
+================================================================
+Link: https://youtu.be/PITCH-VIDEO-PLACEHOLDER
+(substituir pelo link real do YouTube antes da entrega)
+
+================================================================
+INTEGRANTES DO GRUPO 20
+================================================================
+- August Aguiar Gruber — gruber.august11@gmail.com
+- Rogerio Gajewski Piatek dos Santos — rogeriopiatek@gmail.com
+- Vladimir Leal Sposito de Oliveira — vladlealoliv@gmail.com
+- Guilherme Oliveira Rodrigues — guirodrigues.gor@gmail.com
+- Nicole Rodrigues da Silva Oliveira — nicoleoliveira2008@gmail.com
+
+================================================================
+SOBRE O PROJETO
+================================================================
+renutri é uma SPA (Single Page Application) que acompanha o frescor
+dos alimentos da sua dispensa e sugere receitas priorizando os
+itens mais próximos do vencimento — reduzindo o desperdício de
+comida nas casas brasileiras.
+
+Páginas: Início, Despensa, Receitas, Fale Conosco, Sobre.
+Tecnologias: React 19, TypeScript, Webpack 5.
+Persistência: localStorage (inventário da despensa).

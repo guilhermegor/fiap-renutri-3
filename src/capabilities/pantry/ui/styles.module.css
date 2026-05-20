@@ -1,0 +1,463 @@
+/* Pantry capability — shared styles for page + components. */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.greeting {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text-default);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.itemCount {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  font-weight: var(--font-medium);
+}
+
+.toolbar {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.searchWrapper {
+  position: relative;
+  flex: 1;
+  min-width: 240px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  padding: var(--space-3) var(--space-3) var(--space-3) calc(var(--space-3) + var(--space-5));
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-default);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  transition: border-color var(--motion-duration-fast) var(--motion-easing-in-out),
+              box-shadow var(--motion-duration-fast) var(--motion-easing-in-out);
+}
+
+.searchInput::placeholder {
+  color: var(--color-text-muted);
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--color-brand-primary);
+  box-shadow: 0 0 0 3px var(--color-brand-tint);
+}
+
+.addButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-action-primary);
+  color: var(--color-text-on-action);
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-in-out);
+}
+
+.addButton:hover {
+  background-color: var(--color-action-hover);
+}
+
+.addButton:active {
+  background-color: var(--color-action-pressed);
+}
+
+.addButton:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.sortLabel {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  font-weight: var(--font-medium);
+}
+
+.itemList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-3);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.itemListItem {
+  margin: 0;
+}
+
+/* Cards */
+
+.card {
+  position: relative;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--motion-duration-deliberate) var(--motion-easing-out),
+              opacity var(--motion-duration-deliberate) var(--motion-easing-out);
+}
+
+.cardCritical {
+  border-color: var(--color-action-tint);
+  background-color: var(--color-action-tint);
+}
+
+.cardClickable {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-4);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-lg);
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-in-out);
+}
+
+.cardClickable:hover {
+  background-color: var(--color-brand-tint);
+}
+
+.cardClickable:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.cardCritical .cardClickable:hover {
+  background-color: transparent;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding-right: var(--space-6);
+}
+
+.cardTitle {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-default);
+  margin: 0;
+  line-height: var(--leading-tight);
+}
+
+.viewRecipesHint {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-brand-primary);
+}
+
+.removeButton {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  z-index: 1;
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-in-out),
+              color var(--motion-duration-fast) var(--motion-easing-in-out);
+}
+
+.removeButton:hover {
+  background-color: var(--color-error-surface);
+  color: var(--color-error);
+}
+
+.removeButton:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.categoryChip {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-2);
+  background-color: var(--color-surface-raised);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-xs);
+  font-weight: var(--font-medium);
+  align-self: flex-start;
+}
+
+.cardMeta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.expiryRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-secondary);
+}
+
+.storedAtRow {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+/* Ripeness badge */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-xs);
+  font-weight: var(--font-medium);
+  align-self: flex-start;
+
+  /* Critical brand rule: ripeness colour must cut, not transition.
+     A slow transition reads as live decay and is misleading. */
+  transition: none;
+}
+
+.badgeIcon {
+  flex-shrink: 0;
+}
+
+.badgeFresh {
+  background-color: color-mix(in srgb, var(--ripeness-fresh) 22%, transparent);
+  color: #14532d;
+}
+
+.badgePeak {
+  background-color: color-mix(in srgb, var(--ripeness-peak) 22%, transparent);
+  color: #713f12;
+}
+
+.badgeAging {
+  background-color: color-mix(in srgb, var(--ripeness-aging) 22%, transparent);
+  color: #431407;
+}
+
+.badgeCritical {
+  background-color: color-mix(in srgb, var(--ripeness-critical) 28%, transparent);
+  color: #450a0a;
+}
+
+.badgeSpoiled {
+  background-color: color-mix(in srgb, var(--ripeness-spoiled) 28%, transparent);
+  color: var(--color-text-default);
+}
+
+[data-theme='dark'] .badgeFresh,
+[data-theme='dark'] .badgePeak,
+[data-theme='dark'] .badgeAging,
+[data-theme='dark'] .badgeCritical,
+[data-theme='dark'] .badgeSpoiled {
+  color: var(--neutral-100);
+}
+
+/* Empty state */
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-7) var(--space-4);
+  background-color: var(--color-surface);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.emptyTitle {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-default);
+  margin: 0;
+}
+
+.emptyBody {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  max-width: 50ch;
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+
+/* Modal */
+
+.dialog {
+  width: min(560px, calc(100vw - var(--space-5) * 2));
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background-color: var(--color-surface);
+  color: var(--color-text-default);
+  box-shadow: var(--shadow-xl);
+}
+
+.dialog::backdrop {
+  background-color: var(--color-overlay);
+}
+
+.dialogInner {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.dialogHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.dialogTitle {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text-default);
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.formLabel {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-default);
+}
+
+.formHelper {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.formInput,
+.formSelect {
+  padding: var(--space-3);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-default);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  transition: border-color var(--motion-duration-fast) var(--motion-easing-in-out),
+              box-shadow var(--motion-duration-fast) var(--motion-easing-in-out);
+}
+
+.formInput:focus,
+.formSelect:focus {
+  outline: none;
+  border-color: var(--color-brand-primary);
+  box-shadow: 0 0 0 3px var(--color-brand-tint);
+}
+
+.formInput:invalid:not(:placeholder-shown) {
+  border-color: var(--color-error);
+}
+
+.formActions {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: flex-end;
+  margin-top: var(--space-2);
+}
+
+.formCancel {
+  padding: var(--space-3) var(--space-4);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+}
+
+.formCancel:hover {
+  background-color: var(--color-surface-raised);
+}
+
+.formSubmit {
+  padding: var(--space-3) var(--space-5);
+  background-color: var(--color-brand-primary);
+  color: var(--color-text-on-brand);
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-in-out);
+}
+
+.formSubmit:hover {
+  background-color: var(--color-brand-dark);
+}
+
+.formSubmit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
