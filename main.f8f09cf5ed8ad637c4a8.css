@@ -1716,7 +1716,12 @@ body {
 
   .oBCRvIhHoWBG_Tq4pmAA {
     order: 3;
-    width: 100%;
+
+    /* flex-basis (not width) forces the nav onto its own row: the base
+       `.nav { flex: 1 }` sets flex-basis:0, which overrides `width` for a
+       flex item's main size — so `width: 100%` alone never wraps it and
+       the icons overflow into the brand/theme-toggle row. */
+    flex: 1 1 100%;
     overflow-x: auto;
   }
 
