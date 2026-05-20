@@ -642,7 +642,7 @@ New file: `src/shared/styles/foundations/ripeness.css`.
 | `--ripeness-fresh` | `verdinho` | `#4ade80` | Well within expiry | Filled circle | `#14532d` (dark green — passes WCAG AA) |
 | `--ripeness-peak` | `maduro` | `#facc15` | Approaching mid-life | Filled circle | `#713f12` (amber-900 — yellow needs dark text) |
 | `--ripeness-aging` | `atenção` | `#fb923c` | 3–5 days to expiry | Filled circle | `#431407` (orange-950) |
-| `--ripeness-critical` | `passando` | `#f87171` | 1–2 days to expiry | Filled circle | `#450a0a` (red-950) |
+| `--ripeness-critical` | `use já` | `#f87171` | 1–2 days to expiry | Filled circle | `#450a0a` (red-950) |
 | `--ripeness-spoiled` | `estragado` | `#9f3a38` | Past expiry | Filled circle | `#fecaca` (red-200 on dark bg — white text on this stop) |
 
 #### Dark-mode anchors (`[data-theme='dark']`)
@@ -658,7 +658,7 @@ light mode to avoid glare; on dark it can afford to step brighter.
 | `--ripeness-fresh` | `verdinho` | `#86efac` | Green-300 — fresh pop on dark bg |
 | `--ripeness-peak` | `maduro` | `#fde047` | Yellow-300 — more vivid; yellow-400 #facc15 reads muddy on near-black |
 | `--ripeness-aging` | `atenção` | `#fdba74` | Orange-300 — lighter, maintains warmth |
-| `--ripeness-critical` | `passando` | `#fca5a5` | Red-300 — red-400 #f87171 reads fine but -300 adds more pop |
+| `--ripeness-critical` | `use já` | `#fca5a5` | Red-300 — red-400 #f87171 reads fine but -300 adds more pop |
 | `--ripeness-spoiled` | `estragado` | `#b91c1c` | Stepped to red-700 — deeper, conveys finality, readable |
 
 #### Text on ripeness badges (dark mode)
@@ -1053,7 +1053,7 @@ export const strings = {
     fresh:    'verdinho',
     peak:     'maduro',
     aging:    'atenção',
-    critical: 'passando',
+    critical: 'use já',
     spoiled:  'estragado',
   },
 } as const;

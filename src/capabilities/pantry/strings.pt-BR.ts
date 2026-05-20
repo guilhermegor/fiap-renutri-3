@@ -37,7 +37,7 @@ export const strings = {
     fresh: 'verdinho',
     peak: 'maduro',
     aging: 'atenção',
-    critical: 'passando',
+    critical: 'use já',
     spoiled: 'estragado',
   },
   modal: {
