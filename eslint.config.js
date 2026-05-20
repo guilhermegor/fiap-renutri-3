@@ -19,6 +19,12 @@ export default [
       '**/coverage/**',
       '**/*.config.js',
       '**/*.config.cjs',
+      // Mirror tsconfig.json's exclusion of inactive state-manager variants.
+      // typescript-eslint's parser cannot lint files outside the TS project glob.
+      '**/*.rtk.ts',
+      '**/*.rtk.tsx',
+      '**/*.zustand.ts',
+      '**/*.zustand.tsx',
     ],
   },
 

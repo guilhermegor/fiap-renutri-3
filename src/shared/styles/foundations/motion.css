@@ -1,0 +1,39 @@
+/**
+ * Motion tokens.
+ *
+ * Motion communicates state change; it should never draw attention to
+ * itself. All durations halve to 0ms under prefers-reduced-motion;
+ * transform offsets collapse to none. Opacity changes are preserved
+ * because they carry information, not embellishment.
+ *
+ * Ripeness colour changes between sessions MUST cut (no transition).
+ * A slow colour transition reads as live decay and is misleading.
+ */
+
+:root {
+  --motion-duration-instant:    0ms;
+  --motion-duration-fast:       150ms;
+  --motion-duration-normal:     200ms;
+  --motion-duration-deliberate: 250ms;
+  --motion-duration-fill:       300ms;
+
+  --motion-easing-out:    cubic-bezier(0, 0, 0.2, 1);
+  --motion-easing-in:     cubic-bezier(0.4, 0, 1, 1);
+  --motion-easing-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --motion-easing-linear: linear;
+
+  --motion-enter-rise:       translateY(8px);
+  --motion-modal-scale-from: scale(0.96);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-duration-fast:       0ms;
+    --motion-duration-normal:     0ms;
+    --motion-duration-deliberate: 0ms;
+    --motion-duration-fill:       0ms;
+
+    --motion-enter-rise:       translateY(0);
+    --motion-modal-scale-from: scale(1);
+  }
+}

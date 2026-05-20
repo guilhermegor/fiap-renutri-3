@@ -1,0 +1,34 @@
+/**
+ * Ripeness scale — first-class domain token family.
+ *
+ * Represents the freshness state of a tracked food item, mapped to a
+ * five-stop scale. Each stop has both a technical token and a pt-BR
+ * vernacular label (documented in the brand doc, surfaced via the
+ * per-capability strings.pt-BR.ts modules).
+ *
+ * Light- and dark-mode hex values are individually tuned for perceived
+ * parity, not derived by inversion. Peak yellow especially is
+ * de-saturated in light mode (#facc15) and brightened in dark
+ * (#fde047) — a simple darken would produce muddy badges on
+ * near-black surfaces.
+ *
+ * Ripeness colour changes between sessions MUST cut, not transition —
+ * see motion.css. A slow colour transition would read as live decay,
+ * which is misleading and alarming.
+ */
+
+:root {
+  --ripeness-fresh:    #4ade80;
+  --ripeness-peak:     #facc15;
+  --ripeness-aging:    #fb923c;
+  --ripeness-critical: #f87171;
+  --ripeness-spoiled:  #9f3a38;
+}
+
+[data-theme='dark'] {
+  --ripeness-fresh:    #86efac;
+  --ripeness-peak:     #fde047;
+  --ripeness-aging:    #fdba74;
+  --ripeness-critical: #fca5a5;
+  --ripeness-spoiled:  #b91c1c;
+}

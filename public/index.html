@@ -1,9 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>App</title>
+    <meta name="description" content="renutri — sua despensa organizada, sua comida aproveitada." />
+    <title>renutri</title>
+    <!--
+      Theme bootstrap — runs synchronously before first paint to avoid
+      FOUC (Flash Of Unstyled Content). Resolution order:
+        1. explicit localStorage['theme'] of 'light' or 'dark'
+        2. matchMedia('(prefers-color-scheme: dark)')
+        3. fallback: 'light' (the :root default)
+      Light mode is the :root default, so no attribute is needed for it.
+      Dark mode applies [data-theme='dark'] to <html>.
+    -->
+    <script>
+      (function () {
+        var stored = localStorage.getItem('theme');
+        var prefersDark =
+          window.matchMedia &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme;
+
+        if (stored === 'light' || stored === 'dark') {
+          theme = stored;
+        } else if (stored === 'system' || stored === null) {
+          theme = prefersDark ? 'dark' : 'light';
+        } else {
+          theme = 'light';
+        }
+
+        if (theme === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
