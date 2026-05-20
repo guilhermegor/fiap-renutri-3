@@ -26,7 +26,7 @@ export const strings = {
     },
     valueTwo: {
       title: 'Receitas que aproveitam',
-      body: 'Sugestões priorizadas pelos ingredientes que estão passando — cozinha primeiro o que pede mais atenção.',
+      body: 'Sugestões priorizadas pelos ingredientes que você precisa usar já — cozinha primeiro o que pede mais atenção.',
     },
     valueThree: {
       title: 'Cuidado com o planeta',

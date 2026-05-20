@@ -10,7 +10,7 @@
  *   fresh    → verdinho
  *   peak     → maduro
  *   aging    → atenção
- *   critical → passando
+ *   critical → use já
  *   spoiled  → estragado
  *
  * Thresholds are absolute days-to-expiry per brand_design/renutri.md §6.

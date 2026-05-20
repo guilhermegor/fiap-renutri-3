@@ -7,6 +7,8 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve --mode development",
     "build": "cross-env NODE_ENV=production webpack --mode production",
+    "ship:serve": "cd ship && python3 -m http.server 8080",
+    "ship:zip": "cd ship && rm -f ../renutri-fiap.zip && zip ../renutri-fiap.zip index.html app.js styles.css",
     "type-check": "tsc --noEmit",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --report-unused-disable-directives",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
