@@ -27,6 +27,10 @@ export default {
     port: 3000,
     hot: true,
     open: true,
+    // Serve index.html for any unmatched route so client-side routes
+    // (e.g. /despensa, /receitas) survive a direct load or refresh.
+    // Production mirrors this via the deploy workflow's 404.html copy.
+    historyApiFallback: true,
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
