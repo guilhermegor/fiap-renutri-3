@@ -15,6 +15,6 @@
   --color-text-muted:     var(--neutral-400);
   --color-text-disabled:  var(--neutral-300);
 
-  --color-text-on-brand:  #ffffff;
-  --color-text-on-action: #ffffff;
+  --color-text-on-brand:  #fff;
+  --color-text-on-action: #fff;
 }
