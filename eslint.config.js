@@ -25,6 +25,10 @@ export default [
       '**/*.rtk.tsx',
       '**/*.zustand.ts',
       '**/*.zustand.tsx',
+      // ship/ is the hand-written vanilla FIAP delivery — a frozen artefact
+      // with its own conventions (no modules, browser globals, no TS, no JSX).
+      // The React app's rules (TS, import order, DDD boundaries) don't apply.
+      'ship/**',
     ],
   },
 
