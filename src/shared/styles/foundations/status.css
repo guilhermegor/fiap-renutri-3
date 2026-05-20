@@ -1,11 +1,46 @@
-:root {
-  --green-500:  #22c55e;
-  --yellow-400: #eab308;
-  --red-800:    #991b1b;
-  --sky-500:    #0ea5e9;
+/**
+ * Status raw palettes + light-mode semantic aliases.
+ *
+ * --color-success deliberately shares the brand-green ladder. In
+ * renutri, freshness IS the success state — a divergent success-green
+ * would create a confusing second green. WCAG mitigation: pair
+ * success states with a checkmark icon so colour isn't the sole
+ * signal (best practice regardless).
+ *
+ * --color-error switches from the scaffold's #991b1b (red-800) to
+ * #dc2626 (red-600) — better contrast and a closer match to the
+ * brand's warmth without straying into the spoiled-food brown-red.
+ *
+ * Dark-mode overrides live in theme.css.
+ */
 
-  --color-success: var(--green-500);
-  --color-warning: var(--yellow-400);
-  --color-error:   var(--red-800);
+:root {
+  /* Raw amber ladder (warning) — partly overlaps with action-orange
+     but tuned slightly cooler for status semantics. */
+  --amber-100: #fef3c7;
+  --amber-200: #fde68a;
+  --amber-400: #fbbf24;
+  --amber-500: #f59e0b;
+  --amber-600: #d97706;
+  --amber-700: #b45309;
+
+  /* Raw red ladder (error) */
+  --red-400: #f87171;
+  --red-600: #dc2626;
+
+  /* Raw sky ladder (info) */
+  --sky-300: #38bdf8;
+  --sky-500: #0ea5e9;
+
+  /* Light-mode semantic aliases — status */
+  --color-success: var(--color-brand-primary);  /* shares brand green */
+  --color-warning: var(--amber-500);
+  --color-error:   var(--red-600);
   --color-info:    var(--sky-500);
+
+  /* Light-mode semantic aliases — status surfaces (tinted backgrounds) */
+  --color-success-surface: #f0fdf4;
+  --color-warning-surface: #fffbeb;
+  --color-error-surface:   #fef2f2;
+  --color-info-surface:    #f0f9ff;
 }

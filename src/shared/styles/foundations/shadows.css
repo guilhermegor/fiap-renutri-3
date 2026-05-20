@@ -1,0 +1,24 @@
+/**
+ * Shadow tokens.
+ *
+ * Light-mode shadows are conventional black-alpha drop shadows.
+ *
+ * Dark-mode shadows use a hairline white-alpha ring inside the shadow
+ * (the Radix/Linear technique) — deep black shadows are invisible on
+ * near-black backgrounds, so elevation is communicated by a faint
+ * luminous edge instead.
+ */
+
+:root {
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.10);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.08), 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.10), 0 10px 10px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme='dark'] {
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.40), 0 0 0 1px rgba(255, 255, 255, 0.04);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.50), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.60), 0 0 0 1px rgba(255, 255, 255, 0.06);
+  --shadow-xl: 0 20px 30px rgba(0, 0, 0, 0.70), 0 0 0 1px rgba(255, 255, 255, 0.07);
+}

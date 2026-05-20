@@ -1,0 +1,16 @@
+/**
+ * Radii scale.
+ *
+ * Default card radius is --radius-lg. The warm, organised aesthetic
+ * calls for gentle rounding — never sharp corners, never overly
+ * bubbly. --radius-pill is reserved for the ripeness progress bar
+ * and avatar components.
+ */
+
+:root {
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-pill: 9999px;
+}

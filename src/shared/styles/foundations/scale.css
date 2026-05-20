@@ -1,11 +1,27 @@
+/**
+ * Neutral scale — 11 stops, warm true-neutral grey.
+ *
+ * Shift from the scaffold's blue-grey neutrals (Bootstrap-derived) to
+ * a Tailwind gray-* warm-neutral family. The warmer base lets the
+ * brand greens and action oranges read as "natural / sunlit" rather
+ * than "vibrant warning" — consistent with the Veo 3 golden-hour
+ * visual brief.
+ *
+ * These raw tokens are theme-invariant; they're referenced by
+ * semantic aliases that ARE theme-variant (see theme.css for dark
+ * overrides).
+ */
+
 :root {
-  --neutral-100: #f8f9fa;
-  --neutral-200: #e9ecef;
-  --neutral-300: #dee2e6;
-  --neutral-400: #ced4da;
-  --neutral-500: #adb5bd;
-  --neutral-600: #6c757d;
-  --neutral-700: #495057;
-  --neutral-800: #343a40;
-  --neutral-900: #212529;
+  --neutral-50:  #fafafa;
+  --neutral-100: #f5f5f5;
+  --neutral-200: #e5e7eb;
+  --neutral-300: #d1d5db;
+  --neutral-400: #9ca3af;
+  --neutral-500: #6b7280;
+  --neutral-600: #4b5563;
+  --neutral-700: #374151;
+  --neutral-800: #1f2937;
+  --neutral-900: #111827;
+  --neutral-950: #0a0f1a;
 }

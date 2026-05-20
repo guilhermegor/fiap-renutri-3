@@ -1,14 +1,72 @@
+/**
+ * Theme — light-mode surface/border/overlay aliases + ALL dark-mode
+ * overrides.
+ *
+ * Architecture:
+ *   - foundations/<topic>.css → raw palette + light-mode semantic
+ *     aliases for that topic. Loaded under :root.
+ *   - theme.css (this file)   → (a) the "frame" aliases (bg, surface,
+ *     border, overlay, focus-ring) that don't belong to any single
+ *     topic, declared light-mode in :root and (b) the complete
+ *     dark-mode override block under [data-theme='dark'].
+ *
+ * The brand doc inverted the scaffold's prior convention: :root is now
+ * light-mode. [data-theme='dark'] is the override, applied by the
+ * theme-bootstrap snippet in public/index.html before first paint.
+ */
+
 :root {
-  --color-background: var(--neutral-900);
-  --color-surface:    var(--neutral-800);
-  --color-border:     var(--neutral-700);
+  /* Light-mode frame aliases — surfaces, borders, overlays, focus */
+  --color-bg:              var(--neutral-50);     /* #fafafa */
+  --color-surface:         #ffffff;
+  --color-surface-raised:  var(--neutral-100);    /* #f5f5f5 */
+  --color-border:          var(--neutral-200);    /* #e5e7eb */
+  --color-border-subtle:   #f3f4f6;
+  --color-overlay:         rgba(0, 0, 0, 0.40);
+  --color-focus-ring:      var(--color-brand-primary);
 }
 
-[data-theme='light'] {
-  --color-background:    var(--neutral-100);
-  --color-surface:       var(--neutral-200);
-  --color-border:        var(--neutral-300);
-  --color-text-default:  var(--neutral-900);
-  --color-text-muted:    var(--neutral-600);
-  --color-text-disabled: var(--neutral-400);
+[data-theme='dark'] {
+  /* Frame aliases — dark mode */
+  --color-bg:              var(--neutral-950);    /* #0a0f1a */
+  --color-surface:         var(--neutral-900);    /* #111827 */
+  --color-surface-raised:  var(--neutral-800);    /* #1f2937 */
+  --color-border:          var(--neutral-700);    /* #374151 */
+  --color-border-subtle:   var(--neutral-800);
+  --color-overlay:         rgba(0, 0, 0, 0.65);
+
+  /* Text aliases — dark mode */
+  --color-text-default:    #f9fafb;
+  --color-text-secondary:  var(--neutral-300);    /* #d1d5db */
+  --color-text-muted:      var(--neutral-500);    /* #6b7280 */
+  --color-text-disabled:   var(--neutral-700);    /* #374151 */
+  --color-text-on-brand:   #ffffff;
+  --color-text-on-action:  #ffffff;
+
+  /* Brand aliases — dark mode (stepped for perceived parity) */
+  --color-brand-light:     var(--green-400);      /* #4ade80 */
+  --color-brand-primary:   #22c55e;               /* one stop up from light */
+  --color-brand-dark:      var(--green-400);      /* inverts: lighter is "dark accent" on dark bg */
+  --color-brand-tint:      var(--green-950);      /* #052e16 */
+
+  /* Action aliases — dark mode (same anchor — passes on dark bg) */
+  --color-action-primary:  var(--orange-400);     /* #fb923c */
+  --color-action-hover:    var(--orange-500);     /* #f97316 */
+  --color-action-pressed:  var(--orange-600);     /* #ea580c */
+  --color-action-tint:     #431407;               /* orange-950 */
+
+  /* Status aliases — dark mode (tuned per stop, not inverted) */
+  --color-success:         var(--green-400);      /* #4ade80 — bright on dark */
+  --color-warning:         var(--amber-400);      /* #fbbf24 — stepped down for parity */
+  --color-error:           var(--red-400);        /* #f87171 — not too harsh on dark */
+  --color-info:            var(--sky-300);        /* #38bdf8 */
+
+  /* Status surface aliases — dark mode */
+  --color-success-surface: var(--green-950);      /* #052e16 */
+  --color-warning-surface: #451a03;               /* amber-950 */
+  --color-error-surface:   #450a0a;               /* red-950 */
+  --color-info-surface:    #082f49;               /* sky-950 */
+
+  /* Focus ring — brighter on dark for visibility */
+  --color-focus-ring:      var(--green-400);
 }

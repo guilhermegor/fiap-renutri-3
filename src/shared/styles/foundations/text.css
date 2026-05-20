@@ -1,9 +1,20 @@
-:root {
-  --slate-100: #e6e9f0;
-  --slate-400: #aab3cc;
-  --slate-600: #555f7d;
+/**
+ * Light-mode semantic text aliases.
+ *
+ * Text colours come from the neutral scale (scale.css), not a
+ * separate slate palette. The four-stop text ladder is augmented with
+ * dedicated tokens for text-on-fill (white on brand-green or action-
+ * orange).
+ *
+ * Dark-mode overrides live in theme.css.
+ */
 
-  --color-text-default:  var(--slate-100);
-  --color-text-muted:    var(--slate-400);
-  --color-text-disabled: var(--slate-600);
+:root {
+  --color-text-default:   var(--neutral-900);
+  --color-text-secondary: var(--neutral-600);
+  --color-text-muted:     var(--neutral-400);
+  --color-text-disabled:  var(--neutral-300);
+
+  --color-text-on-brand:  #ffffff;
+  --color-text-on-action: #ffffff;
 }
