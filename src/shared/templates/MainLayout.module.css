@@ -134,6 +134,7 @@
 
   .nav {
     order: 3;
+
     /* flex-basis (not width) forces the nav onto its own row: the base
        `.nav { flex: 1 }` sets flex-basis:0, which overrides `width` for a
        flex item's main size — so `width: 100%` alone never wraps it and
