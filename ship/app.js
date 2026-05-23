@@ -218,7 +218,7 @@ const STRINGS = {
   },
 };
 
-const PITCH_VIDEO_URL = 'https://youtu.be/PITCH-VIDEO-PLACEHOLDER';
+const PITCH_VIDEO_URL = 'https://www.youtube.com/shorts/afF8uJlCBRU';
 
 const FOOD_LABELS = {
   vegetable: 'Verdura',

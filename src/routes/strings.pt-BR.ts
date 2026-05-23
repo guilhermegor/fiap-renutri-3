@@ -80,4 +80,4 @@ export const strings = {
  * link. The TXT file at the repo root (INTEGRANTES.txt) holds the
  * same link as a backup for the FIAP grader.
  */
-export const PITCH_VIDEO_URL = 'https://youtu.be/PITCH-VIDEO-PLACEHOLDER';
+export const PITCH_VIDEO_URL = 'https://www.youtube.com/shorts/afF8uJlCBRU';
